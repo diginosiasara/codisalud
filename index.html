@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CodiSalud · Simulador de codificación CIE-10-ES para estudiantes</title>
+  <meta name="description" content="CodiSalud es un simulador docente gratuito y de código abierto con 279 preguntas verificadas para practicar la codificación CIE-10-ES. Funciona sin conexión y sin instalación.">
+  <meta name="theme-color" content="#12233F">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="CodiSalud · Domina la codificación CIE-10-ES sin miedo">
+  <meta property="og:description" content="279 preguntas verificadas con fuentes trazables. 100 % offline y de código abierto.">
+  <meta property="og:image" content="assets/img/logo-codisalud.jpg">
+
+  <link rel="icon" href="assets/img/logo-codisalud.jpg" type="image/jpeg">
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido-principal">Saltar al contenido principal</a>
+
+  <!-- ============ CABECERA ============ -->
+  <header class="site-header" id="inicio">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <span class="brand-logo"><img src="assets/img/logo-codisalud.jpg" alt="" width="40" height="40"></span>
+        <span class="brand-text">
+          <span class="brand-name">CodiSalud</span>
+          <span class="brand-by">by DIGINOSIA.COM
+            <img src="assets/img/icono-diginosia.jpg" alt="" width="14" height="14">
+          </span>
+        </span>
+      </a>
+
+      <nav class="main-nav" id="menu-principal" aria-label="Principal">
+        <ul>
+          <li><a href="#producto">Producto</a></li>
+          <li><a href="#contenido">Contenido</a></li>
+          <li><a href="#marca">Marca</a></li>
+          <li><a href="https://github.com/diginosiasara/simulacoodificacion" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="icon-btn" href="https://www.linkedin.com/in/diginosia/" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3-1.8 0-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-1 1.8-1.9 3.7-1.9 4 0 4.7 2.6 4.7 6v6.8zM5.3 7.4a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zM7.2 20.5H3.4V9h3.8v11.5z"/></svg>
+          <span class="visually-hidden">LinkedIn (se abre en una pestaña nueva)</span>
+        </a>
+        <a class="icon-btn" href="https://github.com/diginosiasara/simulacoodificacion" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1 0-.3-.5-1.3.2-2.7 0 0 1-.3 3.3 1.2a11.4 11.4 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.4.2 2.4.1 2.7.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3z"/></svg>
+          <span class="visually-hidden">GitHub (se abre en una pestaña nueva)</span>
+        </a>
+        <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal">
+          <span class="burger" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="visually-hidden">Menú</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido-principal" tabindex="-1">
+
+    <!-- ============ HÉROE ============ -->
+    <section class="container hero" aria-labelledby="titulo-hero">
+      <div class="hero-grid">
+        <div>
+          <ul class="badges" aria-label="Novedades y características">
+            <li class="badge badge-teal"><span class="dot pulse" aria-hidden="true"></span>Nuevo: Sesión 4</li>
+            <li class="badge">279 preguntas verificadas</li>
+            <li class="badge">CIE-10-ES · 100 % offline</li>
+          </ul>
+
+          <h1 id="titulo-hero">
+            <span class="block">Domina la</span>
+            <span class="marker"><span>codificación</span></span>
+            <span class="block">CIE-10-ES</span>
+            <span class="block accent">sin miedo.</span>
+          </h1>
+
+          <p class="lede">
+            Simulador docente con <strong>279 preguntas reales</strong> extraídas de documentación docente oficial,
+            casos clínicos y manuales de codificación. Diseñado para estudiantes de documentación sanitaria.
+          </p>
+
+          <div class="btn-row">
+            <a class="btn btn-primary" href="https://diginosiasara.github.io/simulacoodificacion/" target="_blank" rel="noopener noreferrer">
+              Usar app gratis <span aria-hidden="true">→</span><span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+            </a>
+            <a class="btn btn-secondary" href="https://github.com/diginosiasara/simulacoodificacion" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" focusable="false" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.6-4-1.6-.5-1.2-1.2-1.5-1.2-1.5-1-.7.1-.7.1-.7 1.1.1 1.7 1.1 1.7 1.1 1 1.7 2.6 1.2 3.2.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.8 0-1.3.5-2.3 1.2-3.1 0-.3-.5-1.3.2-2.7 0 0 1-.3 3.3 1.2a11.4 11.4 0 016 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.4.2 2.4.1 2.7.8.8 1.2 1.8 1.2 3.1 0 4.5-2.7 5.5-5.3 5.8.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0012 .3z"/></svg>
+              Ver GitHub<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+            </a>
+          </div>
+
+          <p class="social-proof">Usado por estudiantes de documentación · Open source MIT</p>
+        </div>
+
+        <!-- Ilustración de ejemplo de pregunta -->
+        <figure class="demo" aria-labelledby="demo-leyenda">
+          <div class="demo-window">
+            <div class="demo-bar">
+              <span class="demo-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span class="demo-file">sesion4.docx · 54 preguntas</span>
+            </div>
+            <div class="demo-body">
+              <p class="demo-tags">
+                <span class="tag tag-dark">Pregunta 47 de 279</span>
+                <span class="tag tag-teal">Diabetes</span>
+              </p>
+              <p class="demo-question">Paciente con diabetes mellitus tipo 2 descompensada con cetoacidosis. ¿<abbr title="Diagnóstico Principal">DP</abbr>?</p>
+              <ul class="demo-options">
+                <li class="is-correct"><span class="opt-mark" aria-hidden="true">✓</span>E11.10 con cetoacidosis <span class="visually-hidden">(respuesta correcta)</span></li>
+                <li><span class="opt-mark" aria-hidden="true">B</span>E11.65 con hiperglucemia</li>
+                <li><span class="opt-mark" aria-hidden="true">C</span>E11.9 sin complicación</li>
+                <li><span class="opt-mark" aria-hidden="true">D</span>E10.10 tipo 1</li>
+              </ul>
+              <div class="demo-solution">
+                <p class="eyebrow">Solución <abbr title="Diagnóstico Principal">DP</abbr>/<abbr title="Diagnósticos Secundarios">DS</abbr> trazable</p>
+                <p>DP: E11.10 · Justificación: documentación docente oficial sesion4.docx pág. 12 + Manual CIE-10-ES diabetes con complicación metabólica.</p>
+              </div>
+            </div>
+          </div>
+          <figcaption id="demo-leyenda" class="visually-hidden">Ejemplo de pregunta del simulador con cuatro opciones y su solución justificada.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ CIFRAS ============ -->
+    <section class="stats" aria-label="Cifras clave">
+      <dl class="container stats-grid">
+        <div><dt>preguntas verificadas con fuentes trazables</dt><dd>279</dd></div>
+        <div><dt>unidades y sesiones docentes oficiales</dt><dd>7</dd></div>
+        <div><dt>offline, open source, sin instalación</dt><dd>100&nbsp;%</dd></div>
+      </dl>
+    </section>
+
+    <!-- ============ PRODUCTO / VÍDEO ============ -->
+    <section class="band band-cream" id="producto" aria-labelledby="titulo-producto">
+      <div class="container product-grid">
+        <div class="product-media">
+          <figure class="phone">
+            <div class="phone-screen">
+              <video id="video-demo" muted loop playsinline preload="metadata"
+                     poster="assets/video/poster.jpg" aria-describedby="video-descripcion">
+                <source src="assets/video/demo.mp4" type="video/mp4">
+                Tu navegador no admite vídeo HTML5. Consulta la descripción de texto situada debajo.
+              </video>
+              <div class="phone-overlay">
+                <span class="tag tag-light">CodiSalud · Demo</span>
+                <button class="video-toggle" type="button" id="video-toggle" aria-label="Pausar vídeo" hidden>
+                  <span aria-hidden="true" class="icon-pause">❚❚</span>
+                  <span aria-hidden="true" class="icon-play">▶</span>
+                </button>
+              </div>
+            </div>
+            <figcaption class="visually-hidden">Vídeo demostrativo sin sonido de 10 segundos.</figcaption>
+          </figure>
+          <details class="transcript">
+            <summary>Descripción del vídeo</summary>
+            <p id="video-descripcion">
+              Vídeo vertical, sin sonido y en bucle, de unos 10 segundos. Muestra un libro abierto, un bolígrafo
+              y fichas de estudio sobre una mesa, con las palabras «Aprende», «Practica» y «Domina» que van
+              apareciendo en pantalla. Termina con el logotipo de CodiSalud (una «C» con un fonendoscopio) y el texto Diginosia.com.
+            </p>
+          </details>
+        </div>
+
+        <div class="product-copy">
+          <p class="eyebrow-chip">Vídeo · Introducción móvil</p>
+          <h2 id="titulo-producto" class="display">
+            <span class="block">Aprende.</span>
+            <span class="block">Practica.</span>
+            <span class="block accent">Domina.</span>
+          </h2>
+          <p class="lede">Experiencia pensada para móvil y escritorio. Flujo docente claro, sin distracciones, con foco en codificación real.</p>
+
+          <ol class="steps">
+            <li>
+              <span class="step-n" aria-hidden="true">01</span>
+              <div>
+                <h3>Aprende fundamentos CIE-10-ES</h3>
+                <p>Unidades 1-3: reglas de codificación, <abbr title="Diagnóstico Principal">DP</abbr>/<abbr title="Diagnósticos Secundarios">DS</abbr>, factores que influyen en el estado de salud. Basado en manuales oficiales.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-n" aria-hidden="true">02</span>
+              <div>
+                <h3>Practica con casos clínicos reales</h3>
+                <p>Sesión 1, 3 y 4: diabetes, tiroides, salud mental, renal, genital. Cada pregunta con fuente trazable sesion4.docx y casos docentes.</p>
+              </div>
+            </li>
+            <li>
+              <span class="step-n" aria-hidden="true">03</span>
+              <div>
+                <h3>Domina con soluciones justificadas</h3>
+                <p>No solo aciertas: entiendes por qué. Solución <abbr title="Diagnóstico Principal">DP</abbr>/<abbr title="Diagnósticos Secundarios">DS</abbr> + razonamiento + referencia a documentación docente oficial.</p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="btn-row">
+            <a class="btn btn-primary btn-sm" href="https://diginosiasara.github.io/simulacoodificacion/" target="_blank" rel="noopener noreferrer">Probar ahora<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+            <p class="pill-note"><span class="dot dot-green" aria-hidden="true"></span>Funciona offline</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ MÉTODO ============ -->
+    <section class="container section" aria-labelledby="titulo-metodo">
+      <div class="section-head">
+        <div>
+          <h2 id="titulo-metodo">Todo lo que necesitas para aprobar</h2>
+          <p>Diseñado desde la documentación docente oficial y manuales de codificación. Sin humo, sin teorías inventadas.</p>
+        </div>
+        <p class="eyebrow-chip">6 pilares del método</p>
+      </div>
+
+      <ul class="card-grid">
+        <li class="card">
+          <span class="card-icon" aria-hidden="true">◉</span>
+          <h3>Simulacro real</h3>
+          <p>279 preguntas con formato examen, tiempo, revisión y estadísticas. Basado en casos clínicos de documentación docente oficial.</p>
+        </li>
+        <li class="card">
+          <span class="card-icon" aria-hidden="true">◎</span>
+          <h3>Soluciones <abbr title="Diagnóstico Principal">DP</abbr>/<abbr title="Diagnósticos Secundarios">DS</abbr></h3>
+          <p>Cada respuesta con Diagnóstico Principal y Secundarios, justificación clínica y referencia a sesion4.docx y manuales.</p>
+        </li>
+        <li class="card">
+          <span class="card-icon" aria-hidden="true">◍</span>
+          <h3>Progreso guardado</h3>
+          <p>Tu avance se guarda en local. Retoma donde lo dejaste, repasa errores, filtra por unidad o sesión.</p>
+        </li>
+        <li class="card">
+          <span class="card-icon" aria-hidden="true">⬔</span>
+          <h3>Temas visuales</h3>
+          <p>Modo claro/oscuro, tipografía Plus Jakarta Sans, alto contraste. Lectura cómoda durante horas de estudio.</p>
+        </li>
+        <li class="card">
+          <span class="card-icon" aria-hidden="true">⟁</span>
+          <h3>Fuentes trazables</h3>
+          <p>Toda pregunta enlaza a su origen: documentación docente oficial, manuales CIE-10-ES, casos reales anonimizados.</p>
+        </li>
+        <li class="card">
+          <span class="card-icon" aria-hidden="true">⬙</span>
+          <h3>Sin instalación</h3>
+          <p>PWA 100 % offline. Abre el enlace y estudia. Código abierto MIT en GitHub, auditado por la comunidad.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ============ CONTENIDO ============ -->
+    <section class="band band-white" id="contenido" aria-labelledby="titulo-contenido">
+      <div class="container section">
+        <div class="title-row">
+          <h2 id="titulo-contenido">Contenido por unidades</h2>
+          <p class="tag tag-coral">Actualizado con Sesión 4</p>
+        </div>
+
+        <div class="units-grid">
+          <article class="unit unit-a">
+            <p class="eyebrow teal">Fundamentos · Unidades 1-3</p>
+            <h3>Bases de CIE-10-ES</h3>
+            <ul class="dash-list">
+              <li>Reglas generales de codificación y normativa</li>
+              <li>Selección de <abbr title="Diagnóstico Principal">DP</abbr> y definición de <abbr title="Diagnósticos Secundarios">DS</abbr></li>
+              <li>Factores que influyen en el estado de salud (Cap. 21)</li>
+              <li>Casos de introducción con manuales oficiales</li>
+            </ul>
+            <ul class="chips">
+              <li>72 preguntas</li>
+              <li>Manuales oficiales</li>
+            </ul>
+          </article>
+
+          <article class="unit unit-b">
+            <p class="eyebrow">Sesión 1 y 3</p>
+            <h3>Práctica intermedia</h3>
+            <p>Casos clínicos docentes con patología médica y quirúrgica frecuente.</p>
+            <ul class="chips chips-soft">
+              <li>Respiratorio</li>
+              <li>Cardio</li>
+              <li>Digestivo</li>
+              <li>Trauma</li>
+            </ul>
+            <p class="unit-foot">153 preguntas · casos reales</p>
+          </article>
+
+          <article class="unit unit-c on-dark">
+            <span class="glow" aria-hidden="true"></span>
+            <div class="unit-inner">
+              <p class="badges-inline">
+                <span class="tag tag-white">Destacado</span>
+                <span class="tag tag-ghost">Nuevo</span>
+              </p>
+              <h3>Sesión 4</h3>
+              <p class="muted-on-dark">54 preguntas de alta complejidad extraídas de sesion4.docx oficial con foco en endocrino y crónicos.</p>
+              <ul class="chips chips-ghost">
+                <li>#diabetes</li>
+                <li>#tiroides</li>
+                <li>#salud mental</li>
+                <li>#renal</li>
+                <li>#genital</li>
+              </ul>
+              <div class="includes">
+                <p class="eyebrow">Incluye</p>
+                <p>Cetoacidosis, hipo/hipertiroidismo, depresión mayor, IRC, patología genital con <abbr title="Diagnóstico Principal">DP</abbr>/<abbr title="Diagnósticos Secundarios">DS</abbr> razonado.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="note"><strong>Nota de trazabilidad:</strong> Todas las preguntas citan su origen en documentación docente oficial, sesion4.docx y manuales CIE-10-ES vigentes. Sin contenido inventado.</p>
+      </div>
+    </section>
+
+    <!-- ============ MARCA ============ -->
+    <section class="band band-dark on-dark" id="marca" aria-labelledby="titulo-marca">
+      <span class="glow glow-1" aria-hidden="true"></span>
+      <span class="glow glow-2" aria-hidden="true"></span>
+      <div class="container brand-grid">
+        <div>
+          <p class="eyebrow-chip eyebrow-chip-dark"><span class="dot dot-green" aria-hidden="true"></span>Marca española registrada · OEPM</p>
+          <h2 id="titulo-marca" class="display on-dark-title">
+            <span class="block">Una marca registrada,</span>
+            <span class="block">un proyecto con respaldo.</span>
+          </h2>
+          <p class="lede lede-dark"><strong>DigiNOSIA.com</strong> es marca registrada desde 2017, base de innovación para proyectos docentes y tecnológicos. CodiSalud nace bajo ese paraguas legal, con trazabilidad y compromiso académico.</p>
+
+          <dl class="facts">
+            <div><dt>Marca Nº</dt><dd>3.692.446 (M3692446)</dd></div>
+            <div><dt>Titular</dt><dd>Sara Lopez-Figueredo Sainz</dd></div>
+            <div><dt>Tipo</dt><dd>Mixto</dd></div>
+            <div><dt>Presentación</dt><dd><time datetime="2017-11-22">22 noviembre 2017</time></dd></div>
+            <div><dt>Concesión</dt><dd><time datetime="2018-04-19">19 abril 2018</time></dd></div>
+            <div><dt>Expedida</dt><dd><time datetime="2018-04-25">25 abril 2018</time></dd></div>
+            <div><dt>Ley</dt><dd>Ley 17/2001 · OEPM</dd></div>
+          </dl>
+
+          <ul class="badges badges-dark">
+            <li class="badge badge-solid">
+              <svg aria-hidden="true" focusable="false" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Marca Española Registrada
+            </li>
+            <li class="badge badge-ghost"><span class="dot dot-green" aria-hidden="true"></span>Vigente · Titular verificado</li>
+          </ul>
+        </div>
+
+        <div class="brand-aside">
+          <div class="logo-panel">
+            <img src="assets/img/logo-diginosia-horizontal.jpg" alt="Logotipo de DIGINOSIA.COM: una «D» cian con nodos tecnológicos y el texto iGNOSiA.com sobre fondo oscuro" width="749" height="127" loading="lazy">
+          </div>
+          <div class="status-panel">
+            <ul class="badges">
+              <li class="badge badge-solid">Marca Española Registrada</li>
+              <li class="badge badge-ok">Vigente · Concedida</li>
+              <li class="badge badge-ghost">M3692446</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ AUTORÍA ============ -->
+    <section class="band band-soft" aria-labelledby="titulo-autoria">
+      <div class="container section-sm">
+        <div class="author">
+          <div class="author-id">
+            <span class="avatar" aria-hidden="true">SL</span>
+            <div>
+              <p class="eyebrow">Desarrollado por</p>
+              <h2 id="titulo-autoria" class="author-name">Sara Lopez Figueredo Sainz</h2>
+              <p class="author-role">Titular marca DIGINOSIA.COM · Docencia + código</p>
+            </div>
+          </div>
+          <div class="btn-row">
+            <a class="btn btn-linkedin btn-sm" href="https://www.linkedin.com/in/diginosia/" target="_blank" rel="noopener noreferrer">
+              <svg aria-hidden="true" focusable="false" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3-1.8 0-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-1 1.8-1.9 3.7-1.9 4 0 4.7 2.6 4.7 6v6.8zM5.3 7.4a2.1 2.1 0 110-4.2 2.1 2.1 0 010 4.2zM7.2 20.5H3.4V9h3.8v11.5z"/></svg>
+              LinkedIn<span class="visually-hidden"> (se abre en una pestaña nueva)</span>
+            </a>
+            <a class="btn btn-primary btn-sm" href="https://github.com/diginosiasara/simulacoodificacion" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">→</span><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LLAMADA A LA ACCIÓN ============ -->
+    <section class="container section" aria-labelledby="titulo-cta">
+      <div class="cta on-dark">
+        <span class="glow" aria-hidden="true"></span>
+        <div class="cta-inner">
+          <div>
+            <h2 id="titulo-cta" class="cta-title">
+              <span class="block">Empieza hoy.</span>
+              <span class="block">Tu <abbr title="Diagnóstico Principal">DP</abbr>/<abbr title="Diagnósticos Secundarios">DS</abbr> te lo agradecerá.</span>
+            </h2>
+            <p class="muted-on-dark">279 preguntas con fuentes trazables, progreso guardado, 100 % offline. Basado en documentación docente oficial y manuales CIE-10-ES.</p>
+          </div>
+          <div class="cta-action">
+            <a class="btn btn-white btn-lg" href="https://diginosiasara.github.io/simulacoodificacion/" target="_blank" rel="noopener noreferrer">Usar app gratis <span aria-hidden="true">→</span><span class="visually-hidden"> (se abre en una pestaña nueva)</span></a>
+            <p class="muted-on-dark small">MIT open source · Sin registro</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ PIE ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <p class="footer-title">
+            <img src="assets/img/logo-codisalud.jpg" alt="" width="32" height="32">
+            <strong>CodiSalud</strong>
+            <span>by DIGINOSIA.COM</span>
+          </p>
+          <p>App desarrollada por marca <strong>DIGINOSIA.COM M3692446</strong>, ES M3692446 expedida 25 abr 2018, titular Sara Lopez Figueredo Sainz. Marca Española Registrada bajo Ley 17/2001 OEPM. Proyecto docente sin ánimo de lucro, código MIT.</p>
+        </div>
+
+        <div class="footer-cols">
+          <nav aria-labelledby="pie-producto">
+            <h2 id="pie-producto" class="footer-h">Producto</h2>
+            <ul>
+              <li><a href="https://diginosiasara.github.io/simulacoodificacion/" target="_blank" rel="noopener noreferrer">Usar app<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></li>
+              <li><a href="https://github.com/diginosiasara/simulacoodificacion" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></li>
+              <li><a href="#contenido">Contenido docente</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2 class="footer-h">Legal</h2>
+            <ul>
+              <li>Marca Nº 3.692.446</li>
+              <li>Concesión 19 abr 2018</li>
+              <li><a href="https://www.linkedin.com/in/diginosia/" target="_blank" rel="noopener noreferrer">Titular: Sara Lopez-Figueredo<span class="visually-hidden"> (se abre en una pestaña nueva)</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="anio">2026</span> DIGINOSIA.COM M3692446 · CodiSalud · Hecho con documentación docente oficial.</p>
+        <p><span class="dot dot-green" aria-hidden="true"></span>100 % offline · Open source MIT</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
